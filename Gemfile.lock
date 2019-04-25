@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    proforma-extended-evaluator (1.0.0.pre.alpha)
+    proforma-extended-evaluator (1.0.0)
       stringento (~> 2)
 
 GEM
@@ -46,7 +46,7 @@ GEM
     parser (2.6.0.0)
       ast (~> 2.4.0)
     powerpack (0.1.2)
-    proforma (1.0.0.pre.alpha)
+    proforma (1.0.0)
       acts_as_hashable (~> 1)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -97,7 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   guard-rspec (~> 4.7)
-  proforma (>= 1.0.0.pre.alpha)
+  proforma (~> 1)
   proforma-extended-evaluator!
   pry (~> 0)
   rspec (~> 3.8)
