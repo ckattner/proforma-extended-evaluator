@@ -8,7 +8,7 @@
 #
 
 module Proforma
-  module ExtendedEvaluator
-    VERSION = '0.0.1'
+  class ExtendedEvaluator
+    VERSION = '1.0.0-alpha'
   end
 end

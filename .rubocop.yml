@@ -2,7 +2,7 @@ Metrics/LineLength:
   Max: 100
 
 Metrics/BlockLength:
-  ExcludedMethods: ['let', 'it', 'describe', 'context']
+  ExcludedMethods: ['let', 'it', 'describe', 'context', 'specify']
 
 Metrics/MethodLength:
   Max: 25
