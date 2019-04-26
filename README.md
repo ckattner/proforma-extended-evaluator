@@ -30,6 +30,12 @@ You can also add this to your Gemfile:
 bundle add proforma-extended-evaluator
 ````
 
+Note: If you are using bundler for auto-requiring then you need to specify as:
+
+```
+gem 'proforma-extended-evaluator', require: 'proforma/extended_evaluator'
+```
+
 ## Examples
 
 ### Connecting to Proforma Rendering Pipeline
