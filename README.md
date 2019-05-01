@@ -122,16 +122,18 @@ Notice how all strings are properly formatted as prescribed in the template.
 
 Formatter options are biased towards USA localization.  You can override any of the options of the Formatter class, here are the options and their defaults:
 
-Option           | Default
----------------- | -------
-currency_code    | 'USD'
-currency_round   | 2
-currency_symbol  | '$'
-date_format      | '%m/%d/%Y'
-mask_char        | 'X'
-false_value      | 'No'
-null_value       | 'Unknown'
-true_value       | 'Yes'
+Option              | Default
+------------------- | -------
+currency_code       | 'USD'
+currency_round      | 2
+currency_symbol     | '$'
+date_format         | '%m/%d/%Y'
+decimal_separator   | '.'
+mask_char           | 'X'
+false_value         | 'No'
+null_value          | 'Unknown'
+thousands_separator | ','
+true_value          | 'Yes'
 
 ## Contributing
 
