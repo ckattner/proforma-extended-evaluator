@@ -1,3 +1,7 @@
+# 1.1.0 (May 7th, 2019)
+
+* Replaced resolver value resolution with Objectable library.
+
 # 1.0.0 (April 24th, 2019)
 
 Publishing first release.

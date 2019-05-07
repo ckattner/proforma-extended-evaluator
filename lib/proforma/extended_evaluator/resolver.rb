@@ -13,50 +13,14 @@ module Proforma
     class Resolver
       DEFAULT_SEPARATOR = '.'
 
-      attr_reader :separator
+      attr_reader :objectable_resolver
 
       def initialize(separator: DEFAULT_SEPARATOR)
-        @separator = separator.to_s
+        @objectable_resolver = Objectable.resolver(separator: separator)
       end
 
       def resolve(value, input)
-        traverse(input, key_path(value))
-      end
-
-      private
-
-      def key_path(value)
-        return Array(value.to_s) if separator.empty?
-
-        value.to_s.split(separator)
-      end
-
-      def traverse(object, through)
-        pointer = object
-
-        through.each do |t|
-          next unless pointer
-
-          pointer = get(pointer, t)
-        end
-
-        pointer
-      end
-
-      def get(object, key)
-        if object.is_a?(Hash)
-          indifferent_hash_get(object, key)
-        elsif object.respond_to?(key)
-          object.public_send(key)
-        end
-      end
-
-      def indifferent_hash_get(hash, key)
-        if hash.key?(key.to_s)
-          hash[key.to_s]
-        elsif hash.key?(key.to_s.to_sym)
-          hash[key.to_s.to_sym]
-        end
+        objectable_resolver.get(input, value)
       end
     end
   end

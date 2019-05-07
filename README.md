@@ -176,10 +176,7 @@ After code changes have successfully gone through the Pull Request review proces
 3. Install dependencies: `bundle`
 4. Update `CHANGELOG.md` with release notes
 5. Commit & push master to remote and ensure CI builds master successfully
-6. Build the project locally: `gem build proforma-extended-evaluator`
-7. Publish package to RubyGems: `gem push proforma-extended-evaluator-X.gem` where X is the version to push
-8. Tag master with new version: `git tag <version>`
-9. Push tags remotely: `git push origin --tags`
+6. Run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## License
 

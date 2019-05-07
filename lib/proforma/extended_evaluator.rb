@@ -8,7 +8,9 @@
 #
 
 require 'bigdecimal'
+require 'date'
 require 'forwardable'
+require 'objectable'
 require 'stringento'
 
 require_relative 'extended_evaluator/formatter'

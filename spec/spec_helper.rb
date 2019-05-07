@@ -7,13 +7,19 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-require 'yaml'
-require 'pry'
 require 'proforma'
+require 'pry'
+require 'pry-byebug'
+require 'yaml'
 
-require 'simplecov'
-require 'simplecov-console'
-SimpleCov.formatter = SimpleCov::Formatter::Console
-SimpleCov.start
+unless ENV['DISABLE_SIMPLECOV'] == 'true'
+  require 'simplecov'
+  require 'simplecov-console'
+
+  SimpleCov.formatter = SimpleCov::Formatter::Console
+  SimpleCov.start do
+    add_filter %r{\A/spec/}
+  end
+end
 
 require './lib/proforma/extended_evaluator'

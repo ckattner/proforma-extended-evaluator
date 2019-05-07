@@ -3,6 +3,8 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   ExcludedMethods: ['let', 'it', 'describe', 'context', 'specify']
+  Exclude:
+    - proforma-extended-evaluator.gemspec
 
 Metrics/MethodLength:
   Max: 25
